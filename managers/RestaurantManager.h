@@ -1,8 +1,8 @@
-#ifndef RESTAURANT_MANAGER_H
+﻿#ifndef RESTAURANT_MANAGER_H
 #define RESTAURANT_MANAGER_H
 
 #include<bits/stdc++.h>
-#include "./models/Restaurant.h"
+#include "../models/Restaurant.h"
 using namespace std;
 
 class RestaurantManager {
@@ -21,10 +21,10 @@ public:
         return instance;
     }
 
-    void addRestaurants(Restaurant* r) {
+    void addRestaurant(Restaurant* r) {
         restaurants.push_back(r);
     }
-    vector<Restaurant*> searchByLocation(string loc) {
+    vector<Restaurant*> searchByLocation(const string& loc) {
         vector<Restaurant*> result;
         for (Restaurant* r : restaurants) {
             if (r->getLocation() == loc) {
@@ -37,3 +37,5 @@ public:
 RestaurantManager* RestaurantManager::instance = nullptr;
 
 #endif
+
+

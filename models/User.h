@@ -1,4 +1,4 @@
-#ifndef USER_H
+﻿#ifndef USER_H
 #define USER_H
 
 #include<bits/stdc++.h>
@@ -21,10 +21,10 @@ public:
     ~User() {
         delete cart;
     }
-    string getName(const string& n) {
-        name = n;
+    string getName() const {
+        return name;
     }
-    void setName(const string &n) {
+    void setName(const string& n) {
         name = n;
     }
     string getAddress() const {
@@ -38,3 +38,5 @@ public:
     }
 };
 #endif
+
+

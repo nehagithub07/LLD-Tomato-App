@@ -1,4 +1,4 @@
-#ifndef UPI_PAYMENT_STRATEGY_H
+﻿#ifndef UPI_PAYMENT_STRATEGY_H
 #define UPI_PAYMENT_STRATEGY_H
 
 #include "PaymentStrategy.h"
@@ -16,8 +16,9 @@ public:
     }
 
     void pay(double amount) override {
-        cout << "Paid ₹" << amount << " using UPI (" << mobile << ")" << endl;
+        cout << "Paid Rs. " << amount << " using UPI (" << mobile << ")" << endl;
     }
 };
 
 #endif // UPI_PAYMENT_STRATEGY_H
+

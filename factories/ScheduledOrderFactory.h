@@ -1,12 +1,12 @@
-#ifndef SCHEDULED_ORDER_FACTORY_H
+﻿#ifndef SCHEDULED_ORDER_FACTORY_H
 #define SCHEDULED_ORDER_FACTORY_H
 
 
 #include "OrderFactory.h"
-#include "models/DeliveryOrder.h"
-#include "models/PickupOrder.h"
-#include "utils/TimeUtils.h"
-#include<bits/stdc++.h>
+#include "../models/DeliveryOrder.h"
+#include "../models/PickupOrder.h"
+#include "../utils/TimeUtils.h"
+#include <bits/stdc++.h>
 using namespace std;
 
 class ScheduledOrderFactory : public OrderFactory {
@@ -28,6 +28,11 @@ public:
         else {
             auto pickupOrder = new PickupOrder();
             pickupOrder->setRestaurantAddress(restaurant->getLocation());
+            order = pickupOrder;
+        }
+        // Fallback to current time if no schedule provided
+        if (scheduleTime.empty()) {
+            scheduleTime = TimeUtils::getCurrentTime();
         }
         order->setUser(user);
         order->setRestaurant(restaurant);
@@ -39,3 +44,5 @@ public:
     }
 };
 #endif
+
+

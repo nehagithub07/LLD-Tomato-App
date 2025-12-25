@@ -1,4 +1,4 @@
-#ifndef MENUITEM_H
+﻿#ifndef MENUITEM_H
 #define MENUITEM_H
 
 #include<bits/stdc++.h>
@@ -19,22 +19,24 @@ public:
     string getCode() const {
         return code;
     }
-    string setCode(const string& c) {
+    void setCode(const string& c) {
         code = c;
     }
     string getName() const {
         return name;
     }
-    string setName(const string& n) {
+    void setName(const string& n) {
         name = n;
     }
     int getPrice() const {
         return price;
     }
-    int setPrice(const int& p) {
+    void setPrice(const int& p) {
         price = p;
     }
 
 
 };
 #endif 
+
+

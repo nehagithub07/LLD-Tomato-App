@@ -1,4 +1,4 @@
-#ifndef PICKUP_ORDER_H
+﻿#ifndef PICKUP_ORDER_H
 #define PICKUP_ORDER_H
 
 #include "Order.h"
@@ -13,7 +13,7 @@ public:
         restaurantAddress = "";
     }
     string getType() const override {
-        return "Delivery";
+        return "Pickup";
     }
     void setRestaurantAddress(const string& addr) {
         restaurantAddress = addr;
@@ -24,3 +24,5 @@ public:
 };
 
 #endif
+
+

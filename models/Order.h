@@ -1,4 +1,4 @@
-#ifndef ORDER_H
+﻿#ifndef ORDER_H
 #define ORDER_H
 
 #include <iostream>
@@ -82,9 +82,11 @@ public:
     double getTotal() const {
         return total;
     }
-    void setTotal(int total) {
+    void setTotal(double total) {
         this->total = total;
     }
 };
 int Order::nextOrderId = 0;
 #endif
+
+
